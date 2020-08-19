@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	 xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+	</h:head>
+	<h:body>
+		<h2>Pessoa Fisica</h2>
+		<h:form>
+			<h:panelGrid>
+				<p:outputLabel value="Nome: " />
+    			<p:inputText id="nome" value="#{pessoaFisicaBean.pessoa.nome}" />
+				
+				<p:outputLabel value="CPF: " />
+    			<p:inputText id="cpf" value="#{pessoaFisicaBean.pessoa.CPF}" />
+    
+    			<p:outputLabel value="RG : " />
+    			<p:inputText id="rg" value="#{pessoaFisicaBean.pessoa.RG}" />
+    
+    			<p:outputLabel value="Telefone: " />
+    			<p:inputText id="telefone" value="#{pessoaFisicaBean.pessoa.telefone}" />
+    
+    			<p:outputLabel value="Endereço: " />
+    			<p:inputText id="endereco" value="#{pessoaFisicaBean.pessoa.endereco}" />
+     			
+     			<p:commandButton value="Cadastrar" id="cad" action="#{pessoaFisicaBean.addPessoaFisica()}" 
+     style="margin-right:20px;" styleClass="ui-priority-primary" />
+      			<p:commandButton value="Ver Lista" id="lista" action="#{pessoaFisica.listarPessoaFisica()}" 
+     style="margin-right:20px;" styleClass="ui-priority-primary" />
+ 
+    		</h:panelGrid>
+		</h:form>
+	</h:body>
+</html>
